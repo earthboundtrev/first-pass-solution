@@ -5,7 +5,7 @@ Returns: a List of integers
 def moving_zeroes(arr):
     # Your code here
 
-    pass
+    return 0
 
 
 if __name__ == '__main__':
