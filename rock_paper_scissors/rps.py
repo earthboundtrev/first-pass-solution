@@ -9,22 +9,26 @@ import sys
 def rock_paper_scissors(n):
   # Your code here
   choices = ['rock', 'paper', 'scissors']
-  
+  counter_list [0] * n
+  counter1=0
+  counter2=0
   iterating_list_counter = 0
   max_iterating_list_size = pow(3, n)
   list_to_return = [None] * max_iterating_list_size
   # choices = [1, 2, 3]
   # comb = itertools.combinations(choices, n)
   # print(list(itertools.combinations(choices, n)))
-  for i in range(0, 3):
-    for j in range(0, 3):
-      # ipdb.set_trace()
-      list_as_iterating = []
-      print("This is the list before the value is updated:", list_as_iterating)
-      list_as_iterating.extend((choices[i],choices[j]))
-      list_to_return[iterating_list_counter] = list_as_iterating
+  for i in range(0, max_iterating_list_size):
+      list_to_iterate=[]
+      list_to_iterate.extend((choices[counter1], choices[counter2]))
+      if(counter2 < n):
+          counter2=counter2+1
+      else:
+          counter1=counter1+1
+          counter2=0
+      list_to_return[iterating_list_counter] = list_to_iterate
       iterating_list_counter=iterating_list_counter+1
-      print("This is the list after the value is updated:", list_as_iterating)
+      
     
   return list_to_return
 
