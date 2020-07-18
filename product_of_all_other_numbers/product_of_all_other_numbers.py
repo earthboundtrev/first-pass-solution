@@ -5,8 +5,12 @@ Returns: a List of integers
 def product_of_all_other_numbers(arr):
     # Your code here
 
-    pass
+    total = 1
 
+    for i in range(len(arr)):
+        total = total * arr[i]
+
+    return total
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
