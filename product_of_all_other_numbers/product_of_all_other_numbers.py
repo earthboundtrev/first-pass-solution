@@ -1,8 +1,9 @@
-# import ipdb
 '''
 Input: a List of integers
 Returns: a List of integers
 '''
+
+# This is a naive solution because it makes too many calls to for more space and is O(n + n) time complexiy
 def product_of_all_other_numbers(arr):
 
     copy_of_arr = arr
@@ -10,14 +11,10 @@ def product_of_all_other_numbers(arr):
     counter = 0
 
     for i in range(0, len(arr)):
-        # ipdb.set_trace()
-        
         multiplied_arr = [element * arr[i] for element in multiplied_arr]
-        print("This is i:", i, "This is counter:", counter)
         multiplied_arr[i] = copy_of_arr[i]
         copy_of_arr = multiplied_arr
         counter=counter+1
-        print(multiplied_arr)
     
     for i in range(0, len(arr)):
         multiplied_arr[i] = multiplied_arr[i] / arr[i]
