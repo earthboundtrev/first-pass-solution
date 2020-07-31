@@ -5,26 +5,28 @@ Returns: an integer
 def single_number(arr):
     # Your code here
 
+    counter2=1
+    counter1=0
+
+    temp1=arr[counter1]
+    temp2=arr[counter2]
+
     empty_list = []
-    counter = 0
+    
+    while arr[counter1] == arr[counter2]:
+        counter1=counter1+2
+        counter2=counter2+2
 
-    for i in range(0, len(arr)):
-        if empty_list==[]:
-            empty_list.append(arr[i])
-        else:
-            for j in range (0, len(empty_list)):
-                if empty_list[j] == arr[i]:
-                    counter=counter+1
-                    if counter==2:
-                        return arr[i]
-                else:
-                    empty_list.append(arr[i])
-                    counter=counter+1
-
-
+        if arr[counter1] != arr[counter2]:
+           if arr[counter2+1] == arr[counter1]:
+               return arr[counter2]
+           elif arr[counter1+1] == arr[counter2]:
+               return arr[counter1]
+           else:
+               return arr[counter1]
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
-    arr = [1, 1, 4, 4, 5, 5, 3, 3, 9, 0, 0]
+    arr = [1, 1, 4, 4, 5, 5, 3, 3, 0, 9, 0]
 
     print(f"The odd-number-out is {single_number(arr)}")
