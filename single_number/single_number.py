@@ -3,10 +3,8 @@ Input: a List of integers where every int except one shows up twice
 Returns: an integer
 '''
 def single_number(arr):
-    # Your code here
-
-    counter2=1
     counter1=0
+    counter2=1
 
     temp1=arr[counter1]
     temp2=arr[counter2]
