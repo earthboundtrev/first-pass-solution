@@ -9,9 +9,11 @@ def single_number(arr):
     temp1=arr[counter1]
     temp2=arr[counter2]
 
-    empty_list = []
+    number_cache = []
+
     
-    while arr[counter1] == arr[counter2]:
+    for i in range(0, len(arr)):
+
         counter1=counter1+2
         counter2=counter2+2
 

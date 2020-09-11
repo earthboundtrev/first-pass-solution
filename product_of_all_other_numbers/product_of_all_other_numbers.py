@@ -4,7 +4,7 @@ Returns: a List of integers
 '''
 
 # This is a naive solution because it makes too many calls to for more space and is O(n + n) time complexiy
-def product_of_all_other_numbers(arr):
+def first_pass_product_of_all_other_numbers(arr):
 
     copy_of_arr = arr
     multiplied_arr = arr
@@ -20,6 +20,10 @@ def product_of_all_other_numbers(arr):
         multiplied_arr[i] = multiplied_arr[i] / arr[i]
 
     return multiplied_arr
+
+def product_of_all_other_numbers(arr):
+    
+    
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
