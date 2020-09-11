@@ -9,7 +9,7 @@ import sys
 def rock_paper_scissors(n):
   # Your code here
   choices = ['rock', 'paper', 'scissors']
-  counter_list [0] * n
+  counter_list = [0] * n
   counter1=0
   counter2=0
   iterating_list_counter = 0
